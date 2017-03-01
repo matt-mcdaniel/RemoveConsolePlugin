@@ -17,10 +17,20 @@ module.exports = {
 }
 ```
 
-### Remove everything except `console.warn` statements
+*Keep everything except `console.log` statements*
+```js
+new RemoveConsolePlugin({
+    // remove `console.log` statements
+    // keep everything else
+    remove: ['log']
+})
+```
+
+*Alternatively, remove everything except `console.warn` statements*
 ```js
 new RemoveConsolePlugin({
     // keep `console.warn` statements
+    // remove everything else
     keep: ['warn']
 })
 ```

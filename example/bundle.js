@@ -79,7 +79,7 @@ function addOne(num) {
     }
 
     if (num < 0) {
-        console.info('Less than 0', num);
+        ;
     }
 
     return num + 1;

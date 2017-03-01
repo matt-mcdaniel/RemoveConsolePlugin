@@ -9,7 +9,7 @@ module.exports = () => {
         },
         plugins: [
             new RemoveConsolePlugin({
-                keep: ['warn']
+                remove: ['log', 'info']
             })
         ]
     }
