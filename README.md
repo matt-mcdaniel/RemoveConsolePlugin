@@ -32,18 +32,18 @@ new RemoveConsolePlugin()
 
 *Keep everything except `console.log` statements*
 ```js
+// remove `console.log` statements
+// keep everything else
 new RemoveConsolePlugin({
-    // remove `console.log` statements
-    // keep everything else
     remove: ['log']
 })
 ```
 
 *Alternatively, remove everything except `console.warn` statements*
 ```js
+// keep `console.warn` statements
+// remove everything else
 new RemoveConsolePlugin({
-    // keep `console.warn` statements
-    // remove everything else
     keep: ['warn']
 })
 ```
