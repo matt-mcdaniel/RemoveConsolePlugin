@@ -1,0 +1,26 @@
+{
+  "name": "remove-console-plugin",
+  "version": "1.0.0",
+  "description": "Remove console.log statements from webpack builds",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matt-mcdaniel/RemoveConsolePlugin.git"
+  },
+  "keywords": [
+    "webpack",
+    "remove",
+    "console",
+    "console.log",
+    "plugin"
+  ],
+  "author": "Matt McDaniel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matt-mcdaniel/RemoveConsolePlugin/issues"
+  },
+  "homepage": "https://github.com/matt-mcdaniel/RemoveConsolePlugin#readme"
+}
