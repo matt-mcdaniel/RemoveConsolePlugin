@@ -4,8 +4,9 @@ Remove `console.log` and other statements from your Webpack build. Configurable 
 
 ## Usage
 
-**webpack.config.js**
 ```js
+// webpaack.config.js
+
 const RemoveConsolePlugin = require('remove-console-plugin');
 
 module.exports = {
@@ -23,6 +24,8 @@ new RemoveConsolePlugin({
     keep: ['warn']
 })
 ```
+
+### Use with UglifyJsPlugin
 
 Use in conjunction with Webpack's [UglifyJsPlugin](https://github.com/webpack-contrib/uglifyjs-webpack-plugin) keep certain console statements in the build.
 
