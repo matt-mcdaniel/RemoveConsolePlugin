@@ -1,5 +1,3 @@
-const fs = require('fs');
-const path = require('path');
 const recast = require('recast');
 const estraverse = require('estraverse');
 
@@ -21,23 +19,6 @@ function RemoveConsolePlugin(options = {keep: []}) {
     }
 
     this.options = options;
-}
-
-function removeLogs(source) {
-    const ast = recast.parse(source);
-
-    const result = estraverse.replace(ast.program, {
-        enter: function(node, parent) {
-            if (node.type === 'CallExpression'
-                && (node.callee.object && node.callee.object.name === 'console')
-                && (node.callee.property && shouldKeep(node.callee.property.name))) {
-
-                this.remove();
-            }
-        }
-    });
-
-    return result;
 }
 
 RemoveConsolePlugin.prototype.apply = function(compiler) {
