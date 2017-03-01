@@ -2,10 +2,16 @@
 
 Remove `console.log` and other statements from your Webpack build. Configurable to keep certain statements in the build (like `console.warn`) and remove others (like `console.log`). Compatible with Webpack's [UglifyJsPlugin](https://github.com/webpack-contrib/uglifyjs-webpack-plugin) .
 
+## Install
+
+```
+npm install --save-dev remove-console-plugin
+```
+
 ## Usage
 
 ```js
-// webpaack.config.js
+// webpack.config.js
 
 const RemoveConsolePlugin = require('remove-console-plugin');
 
@@ -52,13 +58,14 @@ const RemoveConsolePlugin = require('remove-console-plugin');
 
 module.exports = {
     plugins: [
-        // Keep console statements in
+        // Perform JavaScript minification
         new webpack.optimize.UglifyJsPlugin({
             compress: {
+                // keep console statements
                 drop_console: false,
             }
         }),
-        // Keep *only* `console.warn` statements
+        // Remove all console statements except `console.warn`
         new RemoveConsolePlugin({
             keep: ['warn']
         })

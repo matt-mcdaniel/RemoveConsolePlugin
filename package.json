@@ -1,6 +1,6 @@
 {
   "name": "remove-console-plugin",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Remove console.log statements from webpack builds",
   "main": "index.js",
   "scripts": {
